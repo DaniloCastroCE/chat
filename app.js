@@ -1,10 +1,10 @@
-require('dotenv').config()
+
 const express = require('express')
 const path = require('path')
 const app = express()
 const http = require('http')
 const server = http.createServer(app)
-const PORT = process.env.PORT || 3000
+const PORT = 3000
 const router = require('./router/Router')
 const connectServidor = require('./server/ConfigServer')
 
