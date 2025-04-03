@@ -1,0 +1,9 @@
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordar {
+    border: 1px solid black;
+}

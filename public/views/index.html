@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat em tempo real</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/fontes.css">
+    <link rel="stylesheet" href="./css/chat.css">
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <div class="box-chat centralizar">
+                <h1 class="meuNome boldonse-regular ">Nome</h1>
+                <div class="box-users-painel">
+                    <ul class="painel bordar">
+                        <!--<li class="li-painel">
+                            <span class="span-nome lato-black ">Teste diz: </span>
+                            <p class="p-painel roboto-mono-destaque ">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Incidunt, molestiae?</p>
+                        </li>-->
+                    </ul>
+                    <ul class="users bordar">
+                    </ul>
+                </div>
+                <div class="box-text-env">
+                    <div class="text bordar">
+                        <textarea class="text-textarea" name="texto" id="texto"></textarea>
+                    </div>
+                    <div class="env bordar centralizar">
+                        <button class="env-btn">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                height="24px" 
+                                viewBox="0 -960 960 960" 
+                                width="24px" 
+                                fill="#000000">
+                                <path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/client.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
