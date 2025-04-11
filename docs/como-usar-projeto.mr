@@ -1,0 +1,118 @@
+
+# 🚀 Como Usar Este Projeto Node.js
+
+Este guia explica como configurar e executar o projeto localmente.
+
+---
+
+## 🔧 Pré-requisitos
+
+Antes de iniciar, verifique se você tem o seguinte instalado:
+
+- **[Node.js](https://nodejs.org/)** (versão recomendada: 18 ou superior)
+- **NPM** (gerenciador de pacotes do Node.js, geralmente já vem junto)
+
+Para verificar se estão instalados, use os comandos:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## 📥 Clonando o Projeto
+
+Clone o repositório para sua máquina local:
+
+```bash
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd seu-projeto
+```
+
+---
+
+## 📦 Instalando as Dependências
+
+Depois de entrar na pasta do projeto, instale as dependências necessárias com:
+
+```bash
+npm install
+```
+
+Isso irá instalar pacotes como `express`, `dotenv`, e outros definidos no `package.json`.
+
+---
+
+## ⚙️ Configurando o Ambiente
+
+Crie um arquivo `.env` na raiz do projeto com suas variáveis de ambiente. Exemplo:
+
+```env
+PORT=3000
+```
+
+Você pode usar o arquivo `.env` de exemplo como referência.
+
+---
+
+## ▶️ Executando o Projeto
+
+### Em modo normal:
+
+```bash
+node app.js
+```
+
+### Em modo desenvolvimento (se tiver o `nodemon` instalado globalmente):
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌐 Acessando
+
+Depois de iniciar, acesse o projeto pelo navegador:
+
+```
+http://localhost:3000
+```
+
+(ou a porta definida na variável `PORT`)
+
+---
+
+## 📁 Estrutura de Diretórios
+
+1. O código-fonte fica dentro da pasta `src/`, e os arquivos públicos (HTML, CSS, JS) ficam em `public/`.
+
+2. Observação: 
+- [views/] Se você estiver usando um mecanismo de template (como EJS, Pug ou Handlebars), a pasta views/ é o lugar correto para arquivos .ejs, .pug ou até .html, desde que eles sejam renderizados dinamicamente via res.render() no Express.
+```bash
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.get('/', (req, res) => {
+  res.render('index'); // procura views/index.ejs
+});
+
+```
+
+- [public/] Se você estiver usando HTML puro e arquivos estáticos, como um site tradicional, o ideal é mover seu index.html para public/, e usar:
+```bash
+app.use(express.static('public'));
+```
+  
+
+3. Para entender a estrutura completa, consulte o arquivo:
+📄 `docs/Dica-Estrutura_de_pastas.md`
+
+---
+
+## ❓ Dúvidas
+
+Se tiver dúvidas, verifique a documentação no diretório `docs/` ou entre em contato com o autor do projeto.
+
+---

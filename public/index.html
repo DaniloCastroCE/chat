@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Danilo Castro CE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat em tempo real</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <main>
+        <section class="box-login">
+            <div class="conteudo-login">
+                <form action="/login" method="post">
+                    <h2 class="titulo">Tela de Login</h2>
+                    <table>
+                        <td>
+                            <label class="inter-login" for="nome">Nome</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="inter-login" for="senha">Senha</label>
+                            </td>
+                            <td>
+                                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit">logar</button>
+                </form>
+                <p>Não é cadastrado?<br>Clique em <a href="/registrar">registre-se</a> para se cadastrar.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

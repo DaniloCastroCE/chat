@@ -1,0 +1,81 @@
+.inter-login {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+main {
+    height: 100%;
+}
+
+.box-login {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.conteudo-login {
+    background-color: #AAAAAA;
+    box-shadow: 2px 2px 40px 1px rgba(55, 55, 55, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    color: black;
+    font-size: 20px;
+}
+
+.conteudo-login form {
+    margin-bottom: 30px;
+}
+
+.titulo {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.conteudo-login table {
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.conteudo-login table tr td {
+    padding: 0 5px;
+}
+
+.conteudo-login label {
+    display: block;
+    text-align: center;
+}
+
+.conteudo-login input {
+    padding: 10px 5px;
+    font-size: 20px;
+}
+
+.conteudo-login button {
+    width: 30%;
+    min-width: 180px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px auto;
+    display: block;
+}
+
+.box-btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.conteudo-login p {
+    font-family: 'Courier New', Courier, monospace;
+}
