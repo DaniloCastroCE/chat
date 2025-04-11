@@ -14,7 +14,7 @@ const middlewareSession = session ({
     secret: palavraSecret,
     resave: false,
     saveUninitialized: true,
-    cookie: {secure: false}
+    cookie: {secure: true}
 })
 
 app.use(middlewareSession)
