@@ -1,20 +1,19 @@
-require('dotenv').config()
+// require('dotenv').config()
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 4000
+const PORT = 3000
 const path = require('path')
 const http = require('http')
 const server = http.createServer(app)
 const router = require('./src/router/router')
 const connectServer = require('./src/server/Servidor')
 const session = require('express-session')
-const palavraSecret = process.env.SECRET_SESSION || 'minha-palavra-secreta-daniel'
+const palavraSecret = 'minha-palavra-secreta-daniel'
 
 const middlewareSession = session ({
     secret: palavraSecret,
     resave: false,
     saveUninitialized: true,
-    cookie: {secure: true}
 })
 
 app.use(middlewareSession)
