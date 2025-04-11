@@ -8,9 +8,10 @@ const server = http.createServer(app)
 const router = require('./src/router/router')
 const connectServer = require('./src/server/Servidor')
 const session = require('express-session')
+const palavraSecret = process.env.SECRET_SESSION || 'minha-palavra-secreta-daniel'
 
 const middlewareSession = session ({
-    secret: process.env.SECRET_SESSION,
+    secret: palavraSecret,
     resave: false,
     saveUninitialized: true,
     cookie: {secure: false}
