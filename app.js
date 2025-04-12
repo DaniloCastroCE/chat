@@ -1,4 +1,7 @@
 require('dotenv').config()
+const session = require('express-session')
+const RedisStore = require('connect-redis').default
+const redis = require('redis');
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 4000
@@ -6,9 +9,6 @@ const path = require('path')
 const http = require('http')
 const server = http.createServer(app)
 const router = require('./src/router/router')
-const session = require('express-session')
-const RedisStore = require('connect-redis')(session);
-const redis = require('redis');
 const connectServer = require('./src/server/Servidor')
 
 const redisClient = redis.createClient({
