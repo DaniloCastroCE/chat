@@ -12,8 +12,7 @@ const router = require('./src/router/router')
 const connectServer = require('./src/server/Servidor')
 
 const redisClient = redis.createClient({
-  host: 'localhost', // Ou a URL do seu servidor Redis
-  port: 6379, // A porta do Redis, geralmente 6379
+  url: process.env.REDIS_URL // Utilize a URL do Redis fornecida no Railway
 });
 
 const middlewareSession = session ({
