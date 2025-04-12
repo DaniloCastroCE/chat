@@ -1,7 +1,7 @@
 require('dotenv').config()
 const session = require('express-session')
-const RedisStore = require('connect-redis').default
-const redis = require('redis');
+const Redis = require('redis');
+const connectRedis = require('connect-redis');
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 4000
@@ -11,9 +11,11 @@ const server = http.createServer(app)
 const router = require('./src/router/router')
 const connectServer = require('./src/server/Servidor')
 
-const redisClient = redis.createClient({
-  url: process.env.REDIS_URL // Utilize a URL do Redis fornecida no Railway
+const redisClient = Redis.createClient({
+  url: process.env.REDIS_URL // URL do Redis fornecida pelo Railway
 });
+
+const RedisStore = connectRedis(session);
 
 const middlewareSession = session ({
     store: new RedisStore({ client: redisClient }),
