@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.login-register {
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.info {
+  width: 100%;
+  position: absolute;
+}
+.info p {
+  margin: 0;
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  color: #000;
+  text-align: center;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.5)
+}
+
+.success {
+  background: rgb(19, 139, 19, 0.5)
+}

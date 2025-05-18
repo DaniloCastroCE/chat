@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/home-main.css">
+  <title>Chat - Em Tempo Real</title>
+</head>
+<body>
+  <div class="header">
+    <div class="user">
+      <p id="nome"></p>
+      <p id="email"></p>
+    </div>
+    <div class="sair">
+      <button onclick="window.location.href='/logout'">Sair</button>
+    </div>
+  </div>
+  
+  <div class="container center">
+    <div class="ctn-superior">
+      <div class="chat" id="chat">
+        <ul id="messages-list">
+        </ul>
+      </div>
+      <div class="users">
+        <ul id="users-list"></ul>
+      </div>
+    </div>
+    <div class="ctn-inferior">
+      <div class="input">
+        <textarea type="text" id="message-input" name="message-input" placeholder="Digite sua mensagem aqui"></textarea>
+      </div>
+      <div class="box-btn-enviar center">
+        <svg 
+          id="btn-enviar"
+          onclick = "sendMessage()"
+          xmlns="http://www.w3.org/2000/svg" 
+          height="24px" 
+          viewBox="0 -960 960 960" 
+          width="24px" fill="#1f1f1f">
+          <path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/client.js"></script>
+  <script src="./js/home-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/init.css">
+</head>
+<body>
+  <%if(status === 'error') { %>
+    <div class="error info">
+      <p><%=message%></p>
+    </div>
+  <%} else if (status === 'success') {%>
+    <div class="success info">
+      <p><%=message%></p>
+    </div>
+  <% } %>
+  <div class="container">
+    <form class="login-register" action="/login" method="post">
+      <table>
+        <tr>
+          <td>
+            <label for="email">Email</label>
+          </td>
+          <td>
+            <input type="email" name="email" id="email" placeholder="Digite seu email"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="senha">Senha</label>
+          </td>
+          <td>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
+          </td>
+        </tr>
+      </table>
+      
+      <div class="row">
+        <button type="submit">Logar</button>
+      </div>
+      <div class="row">
+        <p>Clique em <a href="/register">registre-se</a>, para criar uma conta</p>
+      </div>  
+    </form>
+  </div>
+</body>
+</html>
