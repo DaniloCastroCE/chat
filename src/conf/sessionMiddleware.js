@@ -2,7 +2,7 @@ require('dotenv').config()
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 
-const tempo = 4 // Horas
+const tempo = 12 // Horas
 
 const sessionMiddleware = session({
   secret: process.env.SECRET,
