@@ -41,7 +41,7 @@ const getUsers = (users) => {
 
 const receiveMessage = (message) => {
   const messagesList = document.querySelector('#messages-list')
-  const date = new Date(message.timestamp)
+  const date = new Date(message.createdAt)
   const timestamp = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()} às ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
 
   const nome = message.author === user.nome ? 'Você:' : message.author.toUpperCase() + ':'
